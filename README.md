@@ -1,6 +1,6 @@
 # arincide
 
-A project inspired by ARInside (http://arinside.org/) in Clojure using the BMC Remedy Java API.
+A project inspired by ARInside (http://arinside.org/) written in Clojure using the BMC Remedy Java API.
 
 ## Installation
 
@@ -22,7 +22,7 @@ TODO
 
 ## License
 
-Copyright © 2015 
+Copyright © 2015 Praveen Vikram
 
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
