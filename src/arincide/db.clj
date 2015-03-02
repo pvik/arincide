@@ -5,10 +5,12 @@
   (:gen-class))
 
 
-(def db-class "org.h2.Driver")
-(def db-protocol "h2")
-(def db-subname "~/.h2db/arincide.db")
+(def properties (util/load-config "conf.clj"))
+(def db-properties (:db properties))
 
+(def db-class (:class db-properties))
+(def db-protocol (:protocol db-properties))
+(def db-subname (:subname db-properties))
 
 ;; create a connection map
 (def dbmap {:classname   db-class
