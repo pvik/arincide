@@ -14,7 +14,7 @@ TODO
 
 ## Options
 
-TODO
+Fill in _conf.clj_ based on _conf.sample.clj_ included in the project root.
 
 ## Examples
 

@@ -8,6 +8,9 @@ CREATE TABLE permissions (groupId INT,
         objectid INT,
         objecttype VARCHAR(50));
 
+CREATE TABLE users (userid INT,
+        username VARCHAR(255)        );
+
 CREATE TABLE forms (id INT PRIMARY KEY,
         key VARCHAR(255) UNIQUE,
         name VARCHAR(225),

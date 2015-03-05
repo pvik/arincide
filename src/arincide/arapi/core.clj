@@ -91,6 +91,10 @@
 (defn group-details [group]
   {:id (.getId group) :name (.getName group) :type (.getGroupType group) :category (.getCategory group)})
 
+(defn user-details [user]
+  {:name (.getUserName user)
+   :email (.getEmailAddress user)})
+
 (defn form-details [form]
   {:id (getFormId form)
    :key (.getKey form)
