@@ -5,14 +5,13 @@ CREATE TABLE groups (id INT PRIMARY KEY,
 
 CREATE TABLE permissions (groupId INT,
         access INT,
-        objectid INT,
+        objectkey VARCHAR(255), -- For Field Permission, this will be the formKey||fieldId
         objecttype VARCHAR(50));
 
 CREATE TABLE users (userid INT,
         username VARCHAR(255)        );
 
-CREATE TABLE forms (id INT PRIMARY KEY,
-        key VARCHAR(255) UNIQUE,
+CREATE TABLE forms (key VARCHAR(255) PRIMARY KEY,
         name VARCHAR(225),
         owner VARCHAR(255),
         type VARCHAR(255),
@@ -20,7 +19,7 @@ CREATE TABLE forms (id INT PRIMARY KEY,
         lastchangedby VARCHAR(255));
 
 CREATE TABLE fields (id INT PRIMARY KEY,
-        formId INT,
+        formkey VARCHAR(255),
         name VARCHAR(255),
         type VARCHAR(255),
         defaultvalue VARCHAR(255),
