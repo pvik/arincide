@@ -56,6 +56,13 @@
   ;; will be used. Also unnecessary.
   (korma-core/entity-fields :id :name :type)) ;; default fields for selects
 
+;; Fields Enity
+(korma-core/defentity fields
+  ;; Basic configuration
+  (korma-core/pk :id)
+  (korma-core/table :fields)
+  (korma-core/database db)
+  (korma-core/entity-fields :id :formKey :name :type :defaultvalue :auditoption :owner :lastupdatetime :lastchangedby :createmode)) ;; default fields for selects
 
 (defn insert-into
   [table-name field-val-map]
