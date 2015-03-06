@@ -62,7 +62,7 @@
   (* (Long/signum int) int))
 
 (defn getFormId [form]
-  (make-positive (.hashCode form)))
+  (.getKey form))
 
 (defn getFormType [formType]
   (get constant-maps/formTypeMap formType "Invalid Form Type"))
