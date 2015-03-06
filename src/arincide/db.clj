@@ -31,13 +31,22 @@
   (korma-core/database db)
   (korma-core/entity-fields :id :name :category :type)) ;; default fields for selects
 
-;; Groups Enity
+;; Groups Entity
 (korma-core/defentity permissions
   ;; Basic configuration
   (korma-core/table :permissions)
   (korma-core/database db)
   (korma-core/entity-fields :groupId :access :objectkey :objecttype)) ;; default fields for selects
 
+;; User Enity
+(korma-core/defentity users
+  ;; Basic configuration
+  (korma-core/pk :username)
+  (korma-core/table :users)
+  (korma-core/database db)
+  (korma-core/entity-fields :userId :username)) ;; default fields for selects
+
+;; Forms Entity
 (korma-core/defentity forms
   ;; Basic configuration
   (korma-core/pk :id) ;; by default "id". This line is unnecessary.
