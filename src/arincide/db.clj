@@ -1,5 +1,6 @@
 (ns arincide.db
   (:require [korma.db :as korma-db]
+            [arincide.util :as util]
             [korma.core :as korma-core]
             [clojure.string :as str])
   (:gen-class))
